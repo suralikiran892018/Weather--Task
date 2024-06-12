@@ -1,0 +1,181 @@
+/* Add keyframes for background animations */
+@keyframes clearSky {
+  0% { background: linear-gradient(to right, #2980B9, #6DD5FA, #FFFFFF); }
+  100% { background: linear-gradient(to right, #2980B9, #6DD5FA, #FFFFFF); }
+}
+
+@keyframes fewClouds {
+  0% { background: linear-gradient(to right, #83a4d4, #b6fbff); }
+  100% { background: linear-gradient(to right, #83a4d4, #b6fbff); }
+}
+
+@keyframes scatteredClouds {
+  0% { background: linear-gradient(to right, #bdc3c7, #2c3e50); }
+  100% { background: linear-gradient(to right, #bdc3c7, #2c3e50); }
+}
+
+@keyframes brokenClouds {
+  0% { background: linear-gradient(to right, #636363, #a2ab58); }
+  100% { background: linear-gradient(to right, #636363, #a2ab58); }
+}
+
+@keyframes showerRain {
+  0% { background: linear-gradient(to right, #3a7bd5, #00d2ff); }
+  100% { background: linear-gradient(to right, #3a7bd5, #00d2ff); }
+}
+
+@keyframes rain {
+  0% { background: linear-gradient(to right, #4b79a1, #283e51); }
+  100% { background: linear-gradient(to right, #4b79a1, #283e51); }
+}
+
+@keyframes thunderstorm {
+  0% { background: linear-gradient(to right, #141E30, #243B55); }
+  100% { background: linear-gradient(to right, #141E30, #243B55); }
+}
+
+@keyframes snow {
+  0% { background: linear-gradient(to right, #83a4d4, #b6fbff); }
+  100% { background: linear-gradient(to right, #83a4d4, #b6fbff); }
+}
+
+@keyframes mist {
+  0% { background: linear-gradient(to right, #606c88, #3f4c6b); }
+  100% { background: linear-gradient(to right, #606c88, #3f4c6b); }
+}
+
+/* Apply animations */
+.clear-sky {
+  animation: clearSky 10s infinite alternate;
+}
+
+.few-clouds {
+  animation: fewClouds 10s infinite alternate;
+}
+
+.scattered-clouds {
+  animation: scatteredClouds 10s infinite alternate;
+}
+
+.broken-clouds {
+  animation: brokenClouds 10s infinite alternate;
+}
+
+.shower-rain {
+  animation: showerRain 10s infinite alternate;
+}
+
+.rain {
+  animation: rain 10s infinite alternate;
+}
+
+.thunderstorm {
+  animation: thunderstorm 10s infinite alternate;
+}
+
+.snow {
+  animation: snow 10s infinite alternate;
+}
+
+.mist {
+  animation: mist 10s infinite alternate;
+}
+
+/* Additional CSS for responsive design and styling */
+.weatherData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.currtemp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tempAndLogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.windData {
+  margin-top: 20px;
+}
+
+.forcastdata {
+  display: flex;
+  overflow-x: auto;
+  margin-top: 20px;
+  padding: 10px;
+  border: 2px solid #608094;
+  border-radius: 10px;
+}
+
+.forcastdata div {
+  padding: 0 20px;
+}
+
+.weatherDescriptions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.descriptionItem {
+  margin: 10px;
+  text-align: center;
+}
+
+.rigtharrow, .leftarrow {
+  cursor: pointer;
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.rigtharrow {
+  right: 10px;
+}
+
+.leftarrow {
+  left: 10px;
+}
+
+@media only screen and (max-width: 880px) {
+  .currtemp {
+    flex-direction: column;
+    gap: 5rem;
+  }
+  .weatherData {
+    height: fit-content;
+  }
+  .forcastdata {
+    width: 300px;
+    border-left: 2px solid #608094;
+    border-right: 2px solid #608094;
+  }
+  .forcastdata div:nth-child(n+2) {
+    border-left: none;
+  }
+  .tempAndLogo img {
+    width: 130px;
+  }
+  .windData {
+    display: none;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .rigtharrow, .leftarrow {
+    display: none;
+  }
+}
